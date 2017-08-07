@@ -22,6 +22,5 @@ namespace Breakout.GameElements
             this.X = x;
             this.Y = y;
         }
-
     }
 }

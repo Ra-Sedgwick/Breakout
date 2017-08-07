@@ -1,18 +1,8 @@
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.csprojResolveAssemblyReference.cache
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.Properties.Resources.resources
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.csproj.GenerateResource.Cache
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.exe.config
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.exe
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.pdb
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.exe
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.pdb
-C:\Users\rased\Documents\GitHub\Portfolio\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.Form1.resources
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.csprojResolveAssemblyReference.cache
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.Form1.resources
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.Properties.Resources.resources
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.csproj.GenerateResource.Cache
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.exe
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\obj\Debug\Breakout.pdb
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.exe.config
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.exe
-C:\Users\rased\Documents\GitHub\Projects\Personal_Projects\Breakout\Breakout\bin\Debug\Breakout.pdb
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\bin\Debug\Breakout.exe.config
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\bin\Debug\Breakout.exe
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\bin\Debug\Breakout.pdb
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.FormView.resources
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.Properties.Resources.resources
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.csproj.GenerateResource.Cache
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.exe
+c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.pdb

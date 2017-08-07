@@ -4,10 +4,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Breakout.GameElements
 {
-
     class Block
     {
         public int Height { get; set; }
@@ -39,9 +39,15 @@ namespace Breakout.GameElements
             this.Position = new Position();
         }
 
-        public void Draw(Graphics graphics)
+        public void Draw(PaintEventArgs e)
         {
-            graphics.FillRectangle(FillColor, this.Position.X, this.Position.Y, this.Width, this.Height);
+            e.Graphics.FillRectangle(FillColor, this.Position.X, this.Position.Y, this.Width, this.Height);
+
+        }
+
+        public void Draw(Graphics g)
+        {
+            g.FillRectangle(FillColor, this.Position.X, this.Position.Y, this.Width, this.Height);
 
         }
     }

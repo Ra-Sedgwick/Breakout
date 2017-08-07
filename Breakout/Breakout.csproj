@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DACF091-99DE-4D4A-BDEA-96F420F9214A}</ProjectGuid>
+    <ProjectGuid>{7F200620-08B8-4730-998F-656BD6CD6E3D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Breakout</RootNamespace>
     <AssemblyName>Breakout</AssemblyName>
@@ -45,22 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormView.Designer.cs">
+      <DependentUpon>FormView.cs</DependentUpon>
     </Compile>
     <Compile Include="GameElements\Ball.cs" />
     <Compile Include="GameElements\Block.cs" />
     <Compile Include="GameElements\Direction.cs" />
-    <Compile Include="GameElements\Logic.cs" />
-    <Compile Include="GameElements\State.cs" />
     <Compile Include="GameElements\Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormView.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

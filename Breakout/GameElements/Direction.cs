@@ -8,27 +8,24 @@ namespace Breakout.GameElements
 {
     class Direction
     {
-        public int DeltaX { get; set; }
-        public int DeltaY { get; set; }
-        public int Speed { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+
 
         public Direction()
         {
-            DeltaX = DeltaY = Speed = 0;
+            X = Y = 0;
         }
 
-        public Direction(int deltaX, int deltaY)
+        public Direction(int xy)
         {
-            DeltaX = deltaX;
-            DeltaY = DeltaY;
-            Speed = 0;
+            X = Y = xy;
         }
 
-        public Direction(int deltaX, int deltaY, int speed)
+        public Direction(int x, int y)
         {
-            DeltaX = deltaX;
-            DeltaY = deltaY;
-            Speed = speed;
+            X = x;
+            Y = y;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Breakout.GameElements
 {
@@ -31,9 +32,33 @@ namespace Breakout.GameElements
             this.Direction = new Direction();
         }
 
-        public void Draw(Graphics graphic)
+        public void Move(PictureBox pb)
         {
-            graphic.FillEllipse(this.FillColor, this.Position.X, this.Position.Y, this.Radius, this.Radius);
+            
+            if ( Position.X + Direction.X > pb.Width - Radius ||
+                 Position.X + Direction.X < 0)
+            {
+                Direction.X *= -1;
+            }
+
+            if ( Position.Y + Direction.Y > pb.Height - Radius ||
+                 Position.Y + Direction.Y < 0)
+            {
+                Direction.Y *= -1;
+            }
+
+            Position.X += Direction.X;
+            Position.Y += Direction.Y;
+        }
+
+        public void Draw(PaintEventArgs e)
+        {
+            e.Graphics.FillEllipse(this.FillColor, this.Position.X, this.Position.Y, this.Radius, this.Radius);
+        }
+
+        public void Draw(Graphics g)
+        {
+            g.FillEllipse(this.FillColor, this.Position.X, this.Position.Y, this.Radius, this.Radius);
         }
     }
 }
