@@ -8,61 +8,67 @@ namespace Breakout
 {
     public partial class FormView : Form
     {
-
+        int BallCount = 0;
         Ball Ball = new Ball();
         Block Paddle = new Block(15, 80, Brushes.Black, 12);
         Block PrototypeBlock = new Block();
         List<Block> Blocks = new List<Block>();
-        int BallCount = 0;
 
+
+
+        // Set Up Form.
         public FormView()
         {
             InitializeComponent();
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);        // Reduces Flickering.
         }
 
-        private void PlayArea_Paint(object sender, PaintEventArgs e)
+        // On Load Draw Initial Game State.
+        private void FormView_Load(object sender, EventArgs e)
         {
-            Update(e);
-
+            InitializeBoard();
         }
 
+        // Update Game State Ever Timer Tick.
         private void DrawTimer_Tick(object sender, EventArgs e)
         {
+            // Did The Ball Move Off Screen?
             bool OutOfBounds = Ball.Move(PlayArea);
 
             if (OutOfBounds)
                 ResetBall();
 
+            // Check For Ball/Block Collision & Remove Blocks.
             BlockCollisionDetection();
 
-
+            // If All Blocks Are Gone, Game Won.
             if (Blocks.Count == 0)
                 Win();
 
+            // Triggers PlayArea_Paint():
             PlayArea.Invalidate();
         }
 
-        private void Win()
+        // Redraw Game Elements.
+        private void PlayArea_Paint(object sender, PaintEventArgs e)
         {
-            Result.Text = "Winner!";
-            DrawTimer.Stop();
+            Update(e);
         }
 
+
+        // Check For Ball/Block Collision, Remove Block If Positive.
         private void BlockCollisionDetection()
         {
-
-
+            // Check For Collision With Paddel.
             if (Ball.Position.Y + Ball.Direction.Y < Ball.Radius)
             {
-
                 Ball.Direction.Y *= -1;
             }
             else if (Ball.Position.Y + Ball.Direction.Y > PlayArea.Height - Ball.Radius - 10)
             {
                 if (Ball.Position.X > Paddle.Position.X && Ball.Position.X < Paddle.Position.X + Paddle.Width)
                 {
+                    // If Paddle is Moving Speed Ball Up, Else Slow It Down. 
                     if (Paddle.Moving)
                     {
                         if (Ball.Direction.Y > 0)
@@ -80,7 +86,6 @@ namespace Breakout
                         else
                         {
                             Ball.Direction.X -= 1;
-
                         }
                     }
                     else
@@ -93,18 +98,13 @@ namespace Breakout
                         {
                             Ball.Direction.Y -= 1;
                         }
-
                     }
-
                     Ball.Direction.Y *= -1;
                 }
             }
 
 
-
-
-
-
+            // Check for Block Collisions
             for (int i = 0; i < Blocks.Count; i++)
             {
                 if (Ball.Position.X > Blocks[i].Position.X &&
@@ -121,11 +121,15 @@ namespace Breakout
             }
         }
 
-        private void FormView_Load(object sender, EventArgs e)
+        // If Winning State, Update Result Test And Stop Game. 
+        private void Win()
         {
-            InitializeBoard();
+            Result.Text = "Winner!";
+            DrawTimer.Stop();
         }
 
+
+        // Redraw Game Elements
         private void Update(PaintEventArgs e)
         {
             Ball.Draw(e);
@@ -136,6 +140,7 @@ namespace Breakout
             }
         }
 
+        // Reset ball With Start Position and Random Direction.
         private void ResetBall()
         {
             BallCount++;
@@ -145,11 +150,13 @@ namespace Breakout
             int X = (PlayArea.Width / 2) - (Ball.Radius / 2);
             int Y = (PlayArea.Height / 2) - (Ball.Radius / 2);
             Ball.Position = new Position(X, Y);
+
             Y = r.Next(-4, 4);
             Ball.Direction = new Direction(Y, 2);
         }
 
 
+        // Set up Initial game State. 
         private void InitializeBoard()
         {
             Graphics Graphics = PlayArea.CreateGraphics();
@@ -162,7 +169,7 @@ namespace Breakout
             Ball.Position = new Position(X, Y);
             Ball.Direction = new Direction(0, 2);
 
-            // Set Draw Paddle
+            // Set Paddle Position
             X = (PlayArea.Bounds.Width / 2) - (Paddle.Width / 2);
             Y = PlayArea.Bounds.Height - Paddle.Height;
             Paddle.Position = new Position(X, Y);
@@ -186,10 +193,12 @@ namespace Breakout
                 }
             }
 
+            // Set up Text labels. 
             Result.Text = "Ball: " + BallCount;
             Instructions.Text = "Move paddle with arrow, or A & D Keys.";
         }
 
+        // Move Paddel. 
         private void FormView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
@@ -204,17 +213,20 @@ namespace Breakout
             }
         }
 
+        // Reset Movment Flag. 
         private void FormView_KeyUp(object sender, KeyEventArgs e)
         {
             Paddle.Moving = false;
         }
 
+        // Start Game When Clicked. 
         private void Start_Click(object sender, EventArgs e)
         {
             DrawTimer.Start();
             PlayArea.Focus();
         }
 
+        // Pause Game When Clicked. 
         private void Pause_Click(object sender, EventArgs e)
         {
             DrawTimer.Stop();
