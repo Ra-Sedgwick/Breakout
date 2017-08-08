@@ -7,3 +7,12 @@ c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug
 c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.exe
 c:\users\rased\documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.pdb
 C:\Users\rased\Documents\visual studio 2017\Projects\Breakout\Breakout\obj\Debug\Breakout.csprojResolveAssemblyReference.cache
+C:\Projects\Breakout\Breakout\bin\Debug\Breakout.exe.config
+C:\Projects\Breakout\Breakout\bin\Debug\Breakout.exe
+C:\Projects\Breakout\Breakout\bin\Debug\Breakout.pdb
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.csprojResolveAssemblyReference.cache
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.FormView.resources
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.Properties.Resources.resources
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.csproj.GenerateResource.Cache
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.exe
+C:\Projects\Breakout\Breakout\obj\Debug\Breakout.pdb

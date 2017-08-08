@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Breakout.GameElements
@@ -34,14 +29,14 @@ namespace Breakout.GameElements
 
         public bool Move(PictureBox pb)
         {
-            
-            if ( Position.X + Direction.X > pb.Width - Radius ||
+
+            if (Position.X + Direction.X > pb.Width - Radius ||
                  Position.X + Direction.X < 0)
             {
                 Direction.X *= -1;
             }
 
-            if ( Position.Y + Direction.Y > pb.Height + 100 ||
+            if (Position.Y + Direction.Y > pb.Height + 100 ||
                  Position.Y + Direction.Y < 0)
             {
                 return true;

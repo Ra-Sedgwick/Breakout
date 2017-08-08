@@ -1,11 +1,7 @@
 ﻿using Breakout.GameElements;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Breakout
@@ -56,14 +52,14 @@ namespace Breakout
 
         private void BlockCollisionDetection()
         {
-            
+
 
             if (Ball.Position.Y + Ball.Direction.Y < Ball.Radius)
             {
-               
+
                 Ball.Direction.Y *= -1;
             }
-            else if (Ball.Position.Y + Ball.Direction.Y > PlayArea.Height - Ball.Radius -10)
+            else if (Ball.Position.Y + Ball.Direction.Y > PlayArea.Height - Ball.Radius - 10)
             {
                 if (Ball.Position.X > Paddle.Position.X && Ball.Position.X < Paddle.Position.X + Paddle.Width)
                 {
@@ -99,20 +95,20 @@ namespace Breakout
                         }
 
                     }
-                    
+
                     Ball.Direction.Y *= -1;
                 }
             }
 
 
-            
+
 
 
 
             for (int i = 0; i < Blocks.Count; i++)
             {
                 if (Ball.Position.X > Blocks[i].Position.X &&
-                    Ball.Position.X < Blocks[i].Position.X  + PrototypeBlock.Width &&
+                    Ball.Position.X < Blocks[i].Position.X + PrototypeBlock.Width &&
                     Ball.Position.Y > Blocks[i].Position.Y &&
                     Ball.Position.Y < Blocks[i].Position.Y + Blocks[i].Height)
                 {
