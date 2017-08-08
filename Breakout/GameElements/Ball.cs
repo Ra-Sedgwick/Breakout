@@ -32,7 +32,7 @@ namespace Breakout.GameElements
             this.Direction = new Direction();
         }
 
-        public void Move(PictureBox pb)
+        public bool Move(PictureBox pb)
         {
             
             if ( Position.X + Direction.X > pb.Width - Radius ||
@@ -41,14 +41,15 @@ namespace Breakout.GameElements
                 Direction.X *= -1;
             }
 
-            if ( Position.Y + Direction.Y > pb.Height - Radius ||
+            if ( Position.Y + Direction.Y > pb.Height + 100 ||
                  Position.Y + Direction.Y < 0)
             {
-                Direction.Y *= -1;
+                return true;
             }
 
             Position.X += Direction.X;
             Position.Y += Direction.Y;
+            return false;
         }
 
         public void Draw(PaintEventArgs e)
