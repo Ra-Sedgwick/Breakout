@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿// Robert Adam Sedgwick
+
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Breakout.GameElements
@@ -10,7 +12,7 @@ namespace Breakout.GameElements
         public Position Position { get; set; }
         public Direction Direction { get; set; }
 
-
+        // Constructors
         public Ball()
         {
             this.Radius = 15;
@@ -27,23 +29,37 @@ namespace Breakout.GameElements
             this.Direction = new Direction();
         }
 
+        // Uses Position and Direction to calcualte ball movement and detect collisions. 
+        // Returns false is ball stayed withing game boundries.
+        // Return true if ball moved out of bounds. 
         public bool Move(PictureBox pb)
         {
+
+            bool outOfBounds = false;
+
+            // Bounce off left and right boundries.
             if (Position.X + Direction.X > pb.Width - Radius ||
                 Position.X + Direction.X < 0)
             {
                 Direction.X *= -1;
             }
 
-            if (Position.Y + Direction.Y > pb.Height + 100 ||
-                Position.Y + Direction.Y < 0)
+            // Bounce off top bounder. 
+            if (Position.Y + Direction.Y > pb.Height + 100)
             {
-                return true;
+                outOfBounds = true;
+
             }
 
+            if (Position.Y + Direction.Y < 0)
+            {
+                Direction.Y *= -1;
+            }
+
+            // Update Position
             Position.X += Direction.X;
             Position.Y += Direction.Y;
-            return false;
+            return outOfBounds;
         }
 
         public void Draw(PaintEventArgs e)

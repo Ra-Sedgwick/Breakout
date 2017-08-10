@@ -1,4 +1,6 @@
-﻿using Breakout.GameElements;
+﻿// Robert Adam Sedgwick
+
+using Breakout.GameElements;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -6,12 +8,15 @@ using System.Windows.Forms;
 
 namespace Breakout
 {
+
+    // Class FormView
+    // Represents GUI and state of game
     public partial class FormView : Form
     {
-        int BallCount = 0;
+        int BallCount = 0;                                      // Number of balls used this game.                                  
         Ball Ball = new Ball();
         Block Paddle = new Block(15, 80, Brushes.Black, 12);
-        Block PrototypeBlock = new Block();
+        Block PrototypeBlock = new Block();                    // Base Block all Blocks are built from. 
         List<Block> Blocks = new List<Block>();
 
 
@@ -19,7 +24,7 @@ namespace Breakout
         // Set Up Form.
         public FormView()
         {
-            InitializeComponent();
+            InitializeComponent();                                      // Draw inital state of game.
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);        // Reduces Flickering.
         }
 
@@ -195,7 +200,7 @@ namespace Breakout
 
             // Set up Text labels. 
             Result.Text = "Ball: " + BallCount;
-            Instructions.Text = "Move paddle with arrow, or A & D Keys.";
+            Instructions.Text = "Move paddle with arrow, or A and D Keys.";
         }
 
         // Move Paddel. 

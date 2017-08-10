@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿// Robert Adam Sedgwick
+
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Breakout.GameElements

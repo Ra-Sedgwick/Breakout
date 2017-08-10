@@ -1,4 +1,6 @@
-﻿namespace Breakout.GameElements
+﻿// Robert Adam Sedgwick
+
+namespace Breakout.GameElements
 {
     class Direction
     {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Robert Adam Sedgwick
+
+using System;
 using System.Windows.Forms;
 
 namespace Breakout
